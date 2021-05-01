@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/7367208505.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7367208505.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:ital@1&display=swap"
+        rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /********* part 1 ********/
+    .part1 {
+        width: 100%;
+        background-color: #fa9905;
+        display: flex;
+        justify-content: space-between;
+        padding: 5% 3% 2% 3%;
+        align-items: center;
+    }
+
+    .part1 .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .part1 img {
+        width: 100px;
+    }
+
+    .part1 p {
+        font-size: 18px;
+    }
+
+    button {
+        background-color: transparent;
+        outline: none;
+        width: 50px;
+        display: flex;
+        height: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+    }
+
+    button .line {
+        width: 100%;
+        height: 5px;
+        margin-top: 10px;
+        background-color: black;
+    }
+
+    /****** part 2 *********/
+    .part2 {
+        width: 100%;
+        position: relative;
+        color: white;
+        padding:  10% 0;
+        height: 500px;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .part2 #video1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        transform: scale(1,2.3) translateY(65px);
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .part2 h1 {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .part2 a{
+          color:white;
+          font-size: 40px;
+          position: relative;
+          z-index: 1;
+          transition: all .7s ease-in-out;
+    }
+
+    /*****  part 3*******/
+    .part3{
+        width: 100%;
+        padding: 10% 0 0 3%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+          transition: all .7s ease-in-out;
+          background-color: white;
+    }
+    .part3 h1{
+        font-family: 'Zen Dots', cursive;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .part3 h1::after{
+        content: '';
+        position: absolute;
+        width:30%;
+        height:10px;
+        border-radius: 3px;
+        background-color: #fa9905;
+        bottom: -10px;
+        left:0;
+    }
+    .service{
+        width: 90%;
+        background-color:#f4f9f9;
+        box-shadow: 0 3px 6px rgba(0,0,0,.2),0 3px 6px rgba(0,0,0,.2);
+        padding:0 2%;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-family: 'Oswald', sans-serif;
+    }
+    .service img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .service span{
+        font-size: 1.7rem;
+        color: #23689b;
+    }
+
+    /******** part 4 **********/
+    .part4{
+        width:100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10%  3%;
+    }
+    .part4 h1{
+        font-family: 'Zen Dots', cursive;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .part4 h1::after{
+        content: '';
+        position: absolute;
+        width:30%;
+        height:10px;
+        border-radius: 3px;
+        background-color: #fa9905;
+        bottom: -10px;
+        left:0;
+    }
+    .part4 p{
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .part4 .info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .part4 .info .project{
+        width: 50%;
+        text-align: center;
+        background-color: #fa9905;
+        color:#3f3697;
+        font-family: 'Krona One', sans-serif;
+    }
+
+    /*********** Part 5 ************/
+    .part5{
+        width:100%;
+        background-color: white;
+        padding: 0 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .part5 h1{
+        font-family: 'Zen Dots', cursive;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .part5 h1::after{
+        content: '';
+        position: absolute;
+        width:30%;
+        height:10px;
+        border-radius: 3px;
+        background-color: #fa9905;
+        bottom: -10px;
+        left:0;
+    }
+    .part5 img{
+        width: 100%;
+        margin-bottom: 30px;
+        height: 400px;
+    }
+    /************** Part 6 ***********/
+    .part6{
+        width: 100%;
+        background-color: white;
+        padding: 3%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .part6 h1{
+        font-family: 'Zen Dots', cursive;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .part6 h1::after{
+        content: '';
+        position: absolute;
+        width:30%;
+        height:10px;
+        border-radius: 3px;
+        background-color: #fa9905;
+        bottom: -10px;
+        left:0;
+    }
+    .part6 img{
+        width: 35%;
+    }
+
+   /**********  Part 7 **************/
+   .part7{
+       width:100%;
+       padding: 3%;
+       font-family: 'Krona One', sans-serif;
+   }
+   .part7 h1{
+        font-family: 'Zen Dots', cursive;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .part7 h1::after{
+        content: '';
+        position: absolute;
+        width:30%;
+        height:10px;
+        border-radius: 3px;
+        background-color: #fa9905;
+        bottom: -10px;
+        left:0;
+    }
+    .part7 img{
+        width: 100%;
+    }
+    .part7 form{
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        padding: 10% 0;
+    }
+    .part7 input{
+        width: 90%;
+        margin-bottom: 20px;
+        border:none;
+        outline:none;
+        font-size: 20px;
+        height: 25px;
+    }
+    .part7 button{
+        width: 70%;
+        background: #fa9905;
+        color: white;
+        border:none;
+        outline: none;
+        margin: auto;
+        font-size: 1.6rem;
+        border-radius: 5px;
+    }
+
+    /********* part 8 ********/
+    .part8{
+        width:100%;
+        background-color:#fa9905;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20%;
+        color:black;
+        font-size: 2.2rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="part1" id='part1'>
+            <div class="logo">
+                <img src="https://www.designfreelogoonline.com/wp-content/uploads/2016/12/00336-Free-logo-maker-Construction-Logo-design-03.png"
+                    alt="">
+                <p style="font-family: 'Open Sans Condensed', sans-serif;"><span
+                        style="font-family: 'Zen Dots', cursive;">VISWAKARMA</span><br>
+                    CONSTRUCTION</p>
+            </div>
+            <button>
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+            </button>
+        </div>
+
+        <div class="part2" id='part3'>
+            <video
+                src="https://player.vimeo.com/external/303953174.sd.mp4?s=44c6628c9ddb0932b487538254ed624e483d9890&profile_id=164&oauth2_token_id=57447761"
+                autoplay muted loop id='video1'></video>
+
+            <h1>LEADERS IN QUALITY CONSTRUCTION AND INFRASTRUCTURE<br></h1>
+            <a href='#part3'><i class="fas fa-chevron-down"></i></a>
+        </div>
+
+        <div class="part3" id="part3">
+            <h1>SERVICES</h1>
+
+            <div class="service">
+                <img src="https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_1280.jpg" alt="">
+                <span>Preconstruction<br> Planning</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, perspiciatis laudantium est dolorem libero praesentium dicta architecto neque. In laborum iure repellat! Animi ut magni excepturi quam amet iusto minima.
+                </p>
+            </div>
+            <div class="service">
+                <img src="https://cdn.pixabay.com/photo/2016/07/11/20/31/construction-1510561_1280.jpg" alt="">
+                <span>Construction<br> 
+                    Management</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, perspiciatis laudantium est dolorem libero praesentium dicta architecto neque. In laborum iure repellat! Animi ut magni excepturi quam amet iusto minima.</p>
+                
+            </div>
+            <div class="service">
+                <img src="https://images.unsplash.com/photo-1597974380476-fbf652dfe188?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbnN0cnVjdGlvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                <span>Architectural<br>
+                    Modelling</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aspernatur facilis, accusamus ea cupiditate dolorem deserunt, quidem possimus odit praesentium necessitatibus! Ratione voluptatum reiciendis, doloremque dolorum perferendis asperiores ad explicabo!
+                </p>
+            </div>
+        </div>
+
+        <div class="part4" id="part4">
+            <h1>ABOUT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quam rerum debitis deserunt delectus nostrum temporibus saepe, aliquid sunt odit, laborum animi quos tempore vitae molestias asperiores illo fugiat. Sit!
+            Maxime, dicta fugiat harum quia rerum sunt obcaecati corporis officia totam quo commodi voluptate rem adipisci assumenda distinctio odit facilis at nobis, doloribus maiores nesciunt tenetur hic laboriosam ratione. Enim?
+            Cum commodi vero omnis earum sit aperiam, dolorum, dicta beatae exercitationem expedita, numquam non. Aperiam ex alias sapiente, vel non sint odit sed cum nam beatae architecto? Facere, vero sint.
+            Placeat nihil vitae dolor itaque laudantium atque soluta iste? Ipsam fugiat nostrum voluptas voluptate saepe veritatis, consequuntur totam atque obcaecati error beatae veniam dolore deleniti soluta iste alias impedit illo.
+            Beatae quaerat repudiandae nobis vero dolorum inventore corporis optio eligendi aut hic iste, harum minus adipisci impedit nulla quidem porro debitis, aperiam est consectetur. Hic maxime libero commodi aliquam incidunt!</p>
+            <div class="info">
+                <div class="project">
+                    <h2>2021</h2>
+                    <h3>Year Established</h3>
+                </div>
+                <div class="project">
+                    <h2>2021</h2>
+                    <h3>Year Established</h3>
+                </div>
+                <div class="project">
+                    <h2>2021</h2>
+                    <h3>Year Established</h3>
+                </div>
+                <div class="project">
+                    <h2>2021</h2>
+                    <h3>Year Established</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="part5">
+            <h1>PROJECTS</h1>
+            <img src="https://images.unsplash.com/photo-1616469816433-903773f63aa5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YnJpZGdlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+            <img src="https://images.unsplash.com/photo-1547822356-589bda96cf5f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+            <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+
+        <div class="part6">
+            <h1>CLIENTS</h1>
+            <img src="https://miro.medium.com/max/1400/1*nZgHhWUTYKXNVym_TKikgA.png" alt="">
+            <img src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/louis-vuitton-logo.png" alt="">
+            <img src="https://logomaster.ai/static/media/sample.c8bf2b04.svg" alt="">
+            <img src="https://logomaster.ai/static/media/gallery013.3994572e.png" alt="">
+        </div>
+
+        <div class="part7">
+            <h1>CONTACT US</h1>
+            <p>click </p>
+            <a href="https://www.google.co.in/maps/place/Vighneshwara+%26+Co/@17.4855122,78.4117999,19.08z/data=!4m5!3m4!1s0x3bcb916d7c1439f1:0x32409f85245edbd7!8m2!3d17.4860974!4d78.4112293"><img src="map1.PNG" alt=""></a>
+
+            <h2>For Inquiries</h2>
+            <p>For any inquiries, questions or commendations,<br>
+                 please call: 123-456-7890 <br>
+                 or<br>
+                  fill out the following form</p>
+
+                  <form action="/" method="POST">
+                  <input type="text" placeholder="First Name...">
+                  <input type="text" placeholder="Last Name...">
+                  <input type="text" placeholder="Mail Id...">
+                  <input type="text" placeholder="Mobile...">  
+                  <button type="submit">SUBMIT</button>
+                </form>
+
+                <h2>Head Office</h2>
+                    <p>500 Terry Francois Street
+                    San Francisco, CA 9415 
+                    info@mysite.com
+                    Tel: 123-456-7890
+                    Fax: 123-456-7890</p>
+        </div>
+
+        <div class="part8">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-whatsapp-square"></i>
+        </div>
+    </div>
+</body>
+
+</html>
